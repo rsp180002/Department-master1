@@ -1,0 +1,17 @@
+<%- include('_header'); %>
+<section class="mt-3 col-12">
+  <h2>Oldest Employee</h2>
+  <div class="card">
+    <div class="card-body">
+      <h5>Male: <%= oldest.male.first_name+" "+oldest.male.last_name %></h5>
+    </div>
+  </div>
+  <div class="card">
+    <div class="card-body">
+      <h5>
+        Female: <%= oldest.female.first_name+" "+oldest.female.last_name %>
+      </h5>
+    </div>
+  </div>
+</section>
+<%- include('_footer'); %>

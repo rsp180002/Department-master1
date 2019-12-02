@@ -1,0 +1,23 @@
+<%- include('_header')%>
+<section class="mt-3 col-12">
+  <h2 class="ml-2">Department Managers</h2>
+  <% Object.keys(manByDep).forEach(function(dep_no){ %>
+  <div class="card">
+    <div class="card-body">
+      <% manByDep[dep_no].emps.forEach(function(emp){ %>
+      <p>
+        <%= manByDep[dep_no].dept_name %> Department
+        <strong> <%= emp.first_name + ' '+ emp.last_name+" " %></strong>
+        <%= emp.gender == 'M' ? 'Male' : 'Female' %>
+      </p>
+      <% }) %>
+      <p>
+        <%= manByDep[dep_no].dept_name %> Department Number of Male Manager <%=
+        manByDep[dep_no].maleCount %> Female Manager <%=
+        manByDep[dep_no].femaleCount %>
+      </p>
+    </div>
+  </div>
+  <% }) %>
+</section>
+<%- include('_footer')%>

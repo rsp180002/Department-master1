@@ -1,0 +1,21 @@
+<%- include('_header'); %>
+
+<section class="mt-3 col-12">
+  <h2>Highest Paid</h2>
+  <div class="card">
+    <div class="card-body">
+      <h5>
+        Male: <%= male.emp.dept.dept_name %> Department - <%=
+        male.emp.emp.first_name+" "+ male.emp.emp.last_name%> - <%= male.salary
+        %>
+      </h5>
+      <h5>
+        Female: <%= female.emp.dept.dept_name %> Department - <%=
+        female.emp.emp.first_name+" "+ female.emp.emp.last_name%> - <%=
+        female.salary %>
+      </h5>
+    </div>
+  </div>
+</section>
+
+<%- include('_footer'); %>
